@@ -2,19 +2,19 @@ package com.example.beerapp;
 
 public class BeerListPresenter implements BeerListMVPContract.Presenter {
 
-    private final BeerListRepository repository;
+    private final RetrofitBeerListRepository repository;
 
-    public BeerListPresenter(BeerListRepository repository) {
+    public BeerListPresenter(RetrofitBeerListRepository repository) {
         this.repository = repository;
     }
 
     @Override
     public void viewCreated() {
-        getNetworkData();
+        loadBeers();
     }
 
-    private void getNetworkData() {
-        repository.getNetworkData();
+    private void loadBeers() {
+        repository.loadBeers();
 
     }
 }

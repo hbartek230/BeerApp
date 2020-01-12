@@ -6,7 +6,7 @@ public class BeerList {
 
     @SerializedName("id")
     private String beerId;
-    @SerializedName("name")
+    @SerializedName("nameDisplay")
     private String beerNme;
     @SerializedName("description")
     private String beerDescription;

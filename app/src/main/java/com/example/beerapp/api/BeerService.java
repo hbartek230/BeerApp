@@ -1,4 +1,4 @@
-package com.example.beerapp.API;
+package com.example.beerapp.api;
 
 import com.example.beerapp.Model.BeerList;
 
@@ -6,8 +6,8 @@ import com.example.beerapp.Model.BeerList;
 import io.reactivex.Observable;
 import retrofit2.http.GET;
 
-public interface ApiService {
+public interface BeerService {
 
-    @GET("beers?key=a9c51c2b1c7f37337eff9f1a09aadc07")
+    @GET("beers")
     Observable<BeerList> getBeerList();
 }
