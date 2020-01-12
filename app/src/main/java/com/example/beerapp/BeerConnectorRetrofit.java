@@ -11,7 +11,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 import retrofit2.Retrofit;
 
-public class BeerListConnector implements RetrofitBeerListRepository {
+public class BeerConnectorRetrofit implements BeerRepositoryRetrofit {
 
     private static final String API_KEY = "key=a9c51c2b1c7f37337eff9f1a09aadc07";
     private static final String TAG = "BeerAplication";
@@ -19,11 +19,11 @@ public class BeerListConnector implements RetrofitBeerListRepository {
     private BeerService beerService;
     private Observable<BeerList> beerList;
 
-    public BeerListConnector(){
+    public BeerConnectorRetrofit(){
 
     }
 
-    public BeerListConnector(BeerService beerService){
+    public BeerConnectorRetrofit(BeerService beerService){
         this.beerService = beerService;
     }
     @Override

@@ -5,8 +5,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.example.beerapp.api.BeerService;
-
 import butterknife.BindView;
 
 public class BeerListActivity extends AppCompatActivity {
@@ -20,7 +18,7 @@ public class BeerListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.beer_list_activity);
 //        beerListRecycler.setLayoutManager(new LinearLayoutManager(this));
-        beerPresenter = new BeerListPresenter(new BeerListConnector());
+        beerPresenter = new BeerListPresenter(new BeerConnectorRetrofit());
         beerPresenter.viewCreated();
     }
 }

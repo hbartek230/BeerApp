@@ -4,7 +4,7 @@ import com.example.beerapp.Model.BeerList;
 
 import io.reactivex.Observable;
 
-public interface RetrofitBeerListRepository {
+public interface BeerRepositoryRetrofit {
 
     Observable<BeerList> loadBeers();
 }
