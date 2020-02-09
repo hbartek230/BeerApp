@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".BeerListActivity">
+    tools:context=".BeerListingActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvBeerList"
+        android:id="@+id/beerList"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>
