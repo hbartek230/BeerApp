@@ -2,9 +2,9 @@ package com.example.beerapp;
 
 public class BeerListPresenter implements BeerListMVPContract.Presenter {
 
-    private final BeerRepositoryRetrofit repository;
+    private final BeerRepository repository;
 
-    public BeerListPresenter(BeerRepositoryRetrofit repository) {
+    public BeerListPresenter(BeerRepository repository) {
         this.repository = repository;
     }
 

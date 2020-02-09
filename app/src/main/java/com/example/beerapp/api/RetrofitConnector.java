@@ -13,15 +13,20 @@ public class RetrofitConnector {
     public static Retrofit createRetrofit(final String API_KEY) {
         if (connector == null) {
             interceptor = new RetrofitInterceptor(API_KEY);
-            OkHttpClient client = new OkHttpClient().newBuilder().addInterceptor(interceptor).build();
+
             connector = new Retrofit.Builder()
                     .baseUrl(BEER_SERVICE_URL)
-                    .client(client)
+                    .client(makeClientState())
                     .addConverterFactory(GsonConverterFactory.create())
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .build();
         }
         return connector;
+    }
+
+    public static OkHttpClient makeClientState(){
+        OkHttpClient client = new OkHttpClient().newBuilder().addInterceptor(interceptor).build();
+        return client;
     }
 
     private RetrofitConnector() {
